@@ -1,0 +1,17 @@
+<form>
+  <label for="username"
+    >Логин:<input
+      [(ngModel)]="username"
+      placeholder="Введите логин"
+      [ngModelOptions]="{ standalone: true }"
+  /></label>
+  <label for="password"
+    >Пароль:
+    <input
+      [(ngModel)]="password"
+      placeholder="Введите пароль"
+      [ngModelOptions]="{ standalone: true }"
+  /></label>
+  <button type="submit" (click)="validation()">Войти</button>
+  <div *ngIf="error" style="color: red">{{ error }}</div>
+</form>
